@@ -1,0 +1,65 @@
+# Directorio de construcción
+build/
+dist/
+*.egg-info/
+
+# Archivos de configuración
+*.ini
+*.cfg
+*.conf
+*.toml
+*.yml
+*.yaml
+*.json
+*.log
+
+# Archivos temporales
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.bak
+*.tmp
+*.DS_Store
+
+# Archivos de depuración
+__pycache__/
+*.pyc
+*.pyo
+*.swp
+*.swo
+
+# Archivos de desarrollo
+.env
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de construcción de Docker
+Dockerfile
+docker-compose.yml
+
+# Archivos de construcción de Kubernetes
+*.yaml
+*.yml
+
+# Archivos de construcción de Heroku
+.slugignore
+
+# Archivos generados por la construcción de PyPI
+.eggs/
+*.egg-info/
+
+# Archivos generados por la construcción de Rasa
+logs/
+data/
+models/
+
+# Archivos generados por la construcción de Flask
+instance/
+.webassets-cache/
+
+# Archivos generados por la construcción de Django
+db.sqlite3
+db.sqlite3-journal
