@@ -1,14 +1,13 @@
-# rules.yml
 version: "3.1"
 
 rules:
 
-- rule: Despedirse cuando el usuario se despida
+- rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
-  - action: utter_despedida
+  - action: utter_goodbye
 
-- rule: Decir 'Soy un bot' cuando el usuario lo cuestione
+- rule: Say 'I am a bot' anytime the user challenges
   steps:
   - intent: bot_challenge
-  - action: utter_soyunbot
+  - action: utter_iamabot

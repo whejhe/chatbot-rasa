@@ -1,31 +1,30 @@
-# stories.yml
 version: "3.1"
 
 stories:
 
-- story: camino feliz
+- story: happy path
   steps:
   - intent: greet
-  - action: utter_saludo
+  - action: utter_greet
   - intent: mood_great
-  - action: utter_feliz
+  - action: utter_happy
 
-- story: camino triste 1
+- story: sad path 1
   steps:
   - intent: greet
-  - action: utter_saludo
+  - action: utter_greet
   - intent: mood_unhappy
-  - action: utter_animo
-  - action: utter_te_sirvio
+  - action: utter_cheer_up
+  - action: utter_did_that_help
   - intent: affirm
-  - action: utter_feliz
+  - action: utter_happy
 
-- story: camino triste 2
+- story: sad path 2
   steps:
   - intent: greet
-  - action: utter_saludo
+  - action: utter_greet
   - intent: mood_unhappy
-  - action: utter_animo
-  - action: utter_te_sirvio
+  - action: utter_cheer_up
+  - action: utter_did_that_help
   - intent: deny
-  - action: utter_despedida
+  - action: utter_goodbye
