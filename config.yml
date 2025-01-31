@@ -10,7 +10,15 @@ assistant_id: 20250131-084710-accepting-station
 # https://rasa.com/docs/rasa/nlu/components/
 language: en
 
-pipeline: null
+# pipeline: null
+pipeline:
+  - name: SpacyNLP
+    model: "es_core_news_md"
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+  - name: SpacyEntityExtractor
+  - name: DIETClassifier
+
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
 # # If you'd like to customize it, uncomment and adjust the pipeline.
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
