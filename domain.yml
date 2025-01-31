@@ -1,34 +1,38 @@
+# domain.yml
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - saludo
+  - despedida
+  - pedir_info
+
+entities:
+  - categoria
+
+slots:
+  categoria:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: categoria
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_saludo:
+    - text: "¡Hola! ¿En qué puedo ayudarte?"
+    - text: "Hola, bienvenido. ¿Cómo puedo asistirte hoy? 😊"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_despedida:
+    - text: "¡Adiós! Que tengas un buen día. 👋"
+    - text: "Hasta luego, vuelve pronto."
 
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_pedir_info:
+    - text: "Aquí tienes información sobre {categoria}."
+    - text: "Claro, te cuento más sobre {categoria}."
+  
+  utter_iamabot:
+    - text: "Sí, soy un asistente virtual creado con Rasa."
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Adiós, vuelve pronto."
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
